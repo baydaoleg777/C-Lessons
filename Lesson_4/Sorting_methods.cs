@@ -70,15 +70,26 @@ namespace ConsoleApplication4
         
             static int[] Bubble_Sort(int[] internal_array)                        // The Bubble sort.
             {
+                bool use = true;
+                
                 for (int i = 0; i < internal_array.Length; i++)
                {
-                   for (int j = 0; j < internal_array.Length - i - 1; j++)
+                   if (use == false)
                    {
+                       break;
+                   }
+                    
+                    for (int j = 0; j < internal_array.Length - i - 1; j++)
+                   {
+
+                      use = false;
+                       
                        if (internal_array[j] > internal_array[j + 1])
                        {
                            internal_array = Swap(internal_array, j, j+1);         // Include Swap method
+                           use = true;
                        }
-                   } 
+                   }
                }
                 return internal_array;
             }
