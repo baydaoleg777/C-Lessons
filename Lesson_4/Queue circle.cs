@@ -8,9 +8,12 @@ namespace ConsoleApplication6
 {
     class Program
     {
+
+        // The program works with Queue circle buffer.
+
         static void Main(string[] args)
         {
-            while (true)
+            while (true)                                                              // Menu.
             {
                 Console.WriteLine("");
                 Console.Write("\n Enter the your choise:");
@@ -69,7 +72,7 @@ namespace ConsoleApplication6
         static int size_array = 8;
 
 
-        static bool Empty()
+        static bool Empty()                                                           // Checking on the empty.
         {
             if (front == -1)
             {
@@ -82,7 +85,7 @@ namespace ConsoleApplication6
         }
 
 
-        static bool Full()
+        static bool Full()                                                            // Checking on the full.
         {
             if ((front == 0 && back == size_array - 1) || (front == back + 1))
             {
@@ -95,7 +98,7 @@ namespace ConsoleApplication6
         }
 
 
-        static void Enqueue(int Element)
+        static void Enqueue(int Element)                                               // Enqueue method.
         {
             if (Full() == true)
             {
@@ -122,7 +125,7 @@ namespace ConsoleApplication6
         }
 
 
-        static int Dequeue()
+        static int Dequeue()                                                          //  Dequeue method.
         {
             int element = 0;
 
@@ -147,7 +150,7 @@ namespace ConsoleApplication6
         }
 
 
-        static void Show()
+        static void Show()                                                            // Display the queue.
         {
             if (Empty() == true)
             {

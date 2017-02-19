@@ -9,13 +9,13 @@ namespace ConsoleApplication5
     class Program
     {
 
-        // The program works with Stack Circle buffer.
+        // The program works with Stack buffer.
 
         static int top;
 
         static void Main(string[] args)
         {
-            Console.WriteLine("\n Please wrire the size of array");                      // Customer enters array size.
+            Console.WriteLine("\n Please wrire the size of array");                   // Customer enters array size.
             int size_array = Int32.Parse(Console.ReadLine());
 
             while (size_array == 0)                                                   // Checking for null array. 
@@ -45,7 +45,7 @@ namespace ConsoleApplication5
             
                 top = our_array.Length;
 
-                while (true)
+                while (true)                                                          // Menu.
                 {
                     Console.WriteLine("");
                     Console.WriteLine("\n What can you do with Stack ?");
